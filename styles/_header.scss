@@ -1,0 +1,11 @@
+@use "var";
+
+.header{
+    background-color: black;
+    text-align: center;
+    margin-top: 10px;
+
+    &-title {
+        color: var.$headerTitleColor;
+    }
+}
