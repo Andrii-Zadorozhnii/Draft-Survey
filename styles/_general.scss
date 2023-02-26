@@ -6,3 +6,8 @@
 main {
     padding: 0px 30px;
 }
+
+input{
+    border: var.$borderSizeStandart;
+    border-radius: var.$borderRadiusStandard;
+}

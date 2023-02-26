@@ -1,0 +1,9 @@
+@use "var";
+@use "preparedCode";
+
+.draft-correction{
+
+    &__image{
+        border-radius: var.$borderRadiusStandard;
+    }
+}

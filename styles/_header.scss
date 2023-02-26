@@ -1,11 +1,19 @@
 @use "var";
+*{
+    font: sans-srif;
+}
 
 .header{
     background-color: black;
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 10px;
 
     &-title {
         color: var.$headerTitleColor;
     }
+}
+
+.small-text{
+    font-size: var.$smallText;
 }

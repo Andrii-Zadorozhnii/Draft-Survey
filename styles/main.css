@@ -1787,11 +1787,50 @@ input[type=phone] {
   animation-name: slideOutUp;
 }
 
+main {
+  padding: 0px 30px;
+}
+
+input {
+  border: 1px solid gray;
+  border-radius: 20px;
+}
+
+* {
+  font: sans-srif;
+}
+
 .header {
   background-color: black;
   text-align: center;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 .header-title {
   color: #fff;
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+.vessel {
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  margin-bottom: 30px;
+}
+.vessel-section {
+  display: flex;
+  justify-content: space-between;
+}
+.vessel-section__name {
+  margin-right: 5px;
+  min-width: 150px;
+}
+
+.draft-correction__image {
+  border-radius: 20px;
 }/*# sourceMappingURL=main.css.map */
