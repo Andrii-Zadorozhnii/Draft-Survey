@@ -1,0 +1,16 @@
+@use "var";
+
+.veccel-parameters{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.block{
+    display: flex;
+    min-width: 200px;
+}
+.item {
+    min-width: 100px;
+    margin-bottom: 5px;
+}
