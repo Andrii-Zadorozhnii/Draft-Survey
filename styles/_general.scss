@@ -1,7 +1,14 @@
 @use "var";
 
+*{
+    vertical-align:middle;
+}
 
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
 
+}
 
 main {
     padding: 0px 30px;
@@ -10,4 +17,5 @@ main {
 input{
     border: var.$borderSizeStandart;
     border-radius: var.$borderRadiusStandard;
+    padding-left: 10px;
 }

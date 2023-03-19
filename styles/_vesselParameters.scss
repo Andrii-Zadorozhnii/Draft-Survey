@@ -1,9 +1,10 @@
 @use "var";
 
-.veccel-parameters{
+.vessel-parameters{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 20px;
 }
 
 .block{
@@ -13,4 +14,6 @@
 .item {
     min-width: 100px;
     margin-bottom: 5px;
+    display: flex;
+    align-items: center;
 }
