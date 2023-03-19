@@ -2,6 +2,7 @@
 
 *{
     vertical-align:middle;
+    font-size: 12px;
 }
 
 body{
@@ -18,4 +19,5 @@ input{
     border: var.$borderSizeStandart;
     border-radius: var.$borderRadiusStandard;
     padding-left: 10px;
+    outline: none;
 }
