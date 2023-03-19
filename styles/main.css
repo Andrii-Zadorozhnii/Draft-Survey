@@ -119,6 +119,7 @@ input {
   border-radius: 5px;
   padding-left: 10px;
   outline: none;
+  text-align: center;
 }
 
 header {
@@ -173,6 +174,9 @@ h3 {
 .cell-left-1 {
   border-top: 0px;
   border-left: 0px;
+}
+.cell-left-3 {
+  padding: 0px;
 }
 .cell-left-4 {
   display: flex;
@@ -250,6 +254,26 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+.cell-center-right-3 {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.cell-center-right-4 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-center-right-5 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-center-right-6 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
 .cell-center-right-10 {
   border-left: 0px;
   border-right: 0px;
@@ -278,6 +302,26 @@ h3 {
   align-items: center;
   justify-content: center;
 }
+.cell-center-left-3 {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.cell-center-left-4 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-center-left-5 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-center-left-6 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
 .cell-center-left-10 {
   border-left: 0px;
   border-right: 0px;
@@ -303,6 +347,26 @@ h3 {
   border-top: 0px;
   border-right: 0px;
 }
+.cell-right-3 {
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.cell-right-4 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-right-5 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
+.cell-right-6 {
+  display: flex;
+  justify-content: center;
+  padding: 0px;
+}
 .cell-right-10 {
   border-left: 0px;
   background-color: lightgray;
@@ -320,7 +384,8 @@ h3 {
   background-color: lightgray;
 }
 
-.initial-date, .final-date {
+.initial-date,
+.final-date {
   width: 100%;
   height: 100%;
   border: 0px;
@@ -328,14 +393,31 @@ h3 {
 }
 
 .block-area-one {
-  width: 33.3%;
+  min-width: 10%;
+  max-width: 32%;
+  width: 100%;
   text-align: center;
 }
 .block-area-two {
-  width: 33.3%;
+  min-width: 10%;
+  max-width: 32%;
+  width: 100%;
   text-align: center;
 }
 .block-area-three {
-  width: 33.3%;
+  min-width: 10%;
+  max-width: 32%;
+  width: 100%;
   text-align: center;
+}
+
+.cell-input {
+  border: 0px;
+  border-radius: 0px;
+  padding-left: 0px;
+}
+
+.density-init-input {
+  width: 100%;
+  border: 0px;
 }/*# sourceMappingURL=main.css.map */
