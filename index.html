@@ -1,380 +1,883 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="./images/favicon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.png" />
 
     <!-- Styles -->
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
 
     <!-- Java Scripts -->
     <script src="./js/general.js"></script>
 
     <title>Draft Survey Calculation</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h2 class="header">Report of weight - draft survey</h2>
+      <h2 class="header">Report of weight - draft survey</h2>
     </header>
     <main>
-        <section class="vessel-parameters">
-            <div class="vessel-name block">
-                <p class="vessel-name__text item"> Vessel:</p>
-                <input class="vessel-name__input item">
+      <section class="vessel-parameters">
+        <div class="vessel-name block">
+          <p class="vessel-name__text item">Vessel:</p>
+          <input class="vessel-name__input item" " />
+        </div>
+        <div class="vessel-cargo block">
+          <p class="vessel-cargo__text item">Cargo:</p>
+          <input class="vessel-cargo__input item" />
+        </div>
+        <div class="vessel-port block">
+          <p class="vessel-port__text item">Port:</p>
+          <input class="vessel-port__input item" />
+        </div>
+        <div class="vessel-operation block">
+          <p class="vessel-operation__text item">Operation:</p>
+          <input class="vessel-operation__input item" />
+        </div>
+      </section>
+      <section class="vessel-data">
+        <div class="vessel-data__block first-section">
+          <div class="vessel-data__block-area cell-left-1"></div>
+          <div class="vessel-data__block-area cell-left-2">
+            <p>DATE</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-3"></div>
+          <div class="vessel-data__block-area cell-left-4">
+            <p>OBSERVED DRAFTS:</p>
+            <p>PORT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-5">
+            <p>STBD</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-6">
+            <p>MEAN</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-7">
+            <p>OBSERVED DENSITY</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-8">
+            <p>TRIM BETWEEN MARKS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-9">
+            <p>LENGTH BETWEEN MARKS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-10">
+            <p>DIST. FROM MARKS TO PERP.</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-11">
+            <p>Positive if Perpen. aft. of Mark</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-12">
+            <p>FWD</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-13">
+            <p>MIDSHIPS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-14">
+            <p>AFT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-15">
+            <p>CORR. TO DRAFT AT MARKS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-16">
+            <p>FWD</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-17">
+            <p>MIDSHIPS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-18">
+            <p>AFT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-19">
+            <p>DRAFTS AT PERPENDICULARS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-20">
+            <p>FWD</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-21">
+            <p>MIDSHIPS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-22">
+            <p>AFT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-23">
+            <p>TRIM BETWEEN PERPENDICULARS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-24">
+            <p>MEAN OF MEANS</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-25">
+            <p>DISPLACEMENT FROM TABLE</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-26">
+            <p>LBP</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-27">
+            <p>DIST. FROM MIDPOINT TO LCF</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-28">
+            <p>Negative if LCF aft of midpoint</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-29">
+            <p>LCF</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-30">
+            <p>TPC</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-31">
+            <p>FIRST TRIM CORRECTION</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-32">
+            <p>MEAN OF MEANS + 0.50</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-33">
+            <p>MEAN OF MEANS - 0.50</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-34">
+            <p>SECOND TRIM CORRECTION CALC.</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-35">
+            <p>AT M/M + 0.50</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-36">
+            <p>AT M/M - 0.50</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-37">
+            <p>DIFF. OF MTC's</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-38">
+            <p>SECOND TRIM CORRECTION</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-39">
+            <p>DIFF. BETWEEN MIDSHIPS DRAFT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-40">
+            <p>HEEL CORRECTION CALCULATION</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-41">
+            <p>TPC AT MIDSHIPS DRAFT PORT</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-42">
+            <p>TPC AT MIDSHIPS DRAFT STARBD</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-43">
+            <p>DIFFERENCE BETWEEN TPC</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-44">
+            <p>HEEL CORRECTION</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-45">
+            <p>DISPLACEMENT CORRECTED</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-46">
+            <p>DENSITY OF HYDROSTATIC TABLES</p>
+          </div>
+          <div class="vessel-data__block-area cell-left-47">
+            <p>CORRECTED DISPLACEMENT</p>
+          </div>
+        </div>
+        <div class="vessel-data__block">
+          <div class="vessel-data__block-area cell-center-left-1">
+            <h3>Initial</h3>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-2">
+            <input class="initial-date" type="date" placeholder="dd.mm.yyyy" />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-3">
+            <div class="block-area-one"><p>FWD</p></div>
+            <div class="block-area-two"><p>MID</p></div>
+            <div class="block-area-three"><p>AFT</p></div>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-4">
+            <div class="block-area-one">
+              <input
+                class="cell-input port-fwd-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-            <div class="vessel-cargo block">
-                <p class="vessel-cargo__text item"> Cargo:</p>
-                <input class="vessel-cargo__input item">
+            <div class="block-area-two">
+              <input
+                class="cell-input port-mid-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-            <div class="vessel-port block">
-                <p class="vessel-port__text item"> Port:</p>
-                <input class="vessel-port__input item">
+            <div class="block-area-three">
+              <input
+                class="cell-input port-aft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-            <div class="vessel-operation block">
-                <p class="vessel-operation__text item"> Operation:</p>
-                <input class="vessel-operation__input item">
+          </div>
+          <div class="vessel-data__block-area cell-center-left-5">
+            <div class="block-area-one">
+              <input
+                class="cell-input port-fwd-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-        </section>
-        <section class="vessel-data">
-            <div class="vessel-data__block">
-                <div class="vessel-data__block-area cell-left-1"></div>
-                <div class="vessel-data__block-area cell-left-2">
-                    <p>DATE and TIME</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-3"></div>
-                <div class="vessel-data__block-area cell-left-4">
-                    <p>OBSERVED DRAFTS:</p>
-                    <p>PORT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-5">
-                    <p>STBD</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-6">
-                    <p>MEAN</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-7">
-                    <p>OBSERVED DENSITY</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-8">
-                    <p>TRIM BETWEEN MARKS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-9">
-                    <p>LENGTH BETWEEN MARKS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-10">
-                    <p>DIST. FROM MARKS TO PERP.</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-11">
-                    <p>Positive if Perpen. aft. of Mark</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-12">
-                    <p>FWD</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-13">
-                    <p>MIDSHIPS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-14">
-                    <p>AFT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-15">
-                    <p>CORR. TO DRAFT AT MARKS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-16">
-                    <p>FWD</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-17">
-                    <p>MIDSHIPS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-18">
-                    <p>AFT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-19">
-                    <p>DRAFTS AT PERPENDICULARS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-20">
-                    <p>FWD</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-21">
-                    <p>MIDSHIPS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-22">
-                    <p>AFT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-23">
-                    <p>TRIM BETWEEN PERPENDICULARS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-24">
-                    <p>MEAN OF MEANS</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-25">
-                    <p>DISPLACEMENT FROM TABLE</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-26">
-                    <p>LBP</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-27">
-                    <p>DIST. FROM MIDPOINT TO LCF</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-28">
-                    <p>Negative if LCF aft of midpoint</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-29">
-                    <p>LCF</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-30">
-                    <p>TPC</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-31">
-                    <p>FIRST TRIM CORRECTION</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-32">
-                    <p>MEAN OF MEANS + 0.50</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-33">
-                    <p>MEAN OF MEANS - 0.50</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-34">
-                    <p>SECOND TRIM CORRECTION CALC.</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-35">
-                    <p>AT M/M + 0.50</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-36">
-                    <p>AT M/M - 0.50</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-37">
-                    <p>DIFF. OF MTC's</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-38">
-                    <p>SECOND TRIM CORRECTION</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-39">
-                    <p>DIFF. BETWEEN MIDSHIPS DRAFT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-40">
-                    <p>HEEL CORRECTION CALCULATION</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-41">
-                    <p>TPC AT MIDSHIPS DRAFT PORT</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-42">
-                    <p>TPC AT MIDSHIPS DRAFT STARBD</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-43">
-                    <p>DIFFERENCE BETWEEN TPC</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-44">
-                    <p>HEEL CORRECTION</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-45">
-                    <p>DISPLACEMENT CORRECTED</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-46">
-                    <p>DENSITY OF HYDROSTATIC TABLES</p>
-                </div>
-                <div class="vessel-data__block-area cell-left-47">
-                    <p>CORRECTED DISPLACEMENT</p>
-                </div>
+            <div class="block-area-two">
+              <input
+                class="cell-input port-mid-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-            <div class="vessel-data__block">
-                <div class="vessel-data__block-area cell-center-left-1">
-                    <h3>Initial</h3>
-                </div>
-                <div class="vessel-data__block-area cell-center-left-2">
-                    <input class="initial-date" type="date" placeholder="dd.mm.yyyy">
-                </div>
-                <div class="vessel-data__block-area cell-center-left-3">
-                    <div class="block-area-one"><p>FWD</p></div>
-                    <div class="block-area-two"><p>MID</p></div>
-                    <div class="block-area-three"><p>AFT</p></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-left-4">
-                    <div class="block-area-one"><input class="cell-input port-fwd-draft-init-input" type="number" value="0.00"></div>
-                    <div class="block-area-two"><input class="cell-input port-mid-init-input" type="number" value="0.00"></div>
-                    <div class="block-area-three"><input class="cell-input port-aft-init-input" type="number" value="0.00"></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-left-5">
-                    <div class="block-area-one"><input class="cell-input port-fwd-draft-init-input" type="number" value="0.00"></div>
-                    <div class="block-area-two"><input class="cell-input port-mid-init-input" type="number" value="0.00"></div>
-                    <div class="block-area-three"><input class="cell-input port-aft-init-input" type="number" value="0.00"></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-left-6">
-                    <div class="block-area-one"><p class="cell-input port-fwd-draft-init-result"></p>0,00</div>
-                    <div class="block-area-two"><p class="cell-input mid-draft-init-result">0,00</p></div>
-                    <div class="block-area-three"><p class="cell-input aft-draft-init-result">0,00</p></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-left-7">
-                    <input class="density-init-input" type="number" value="1.025">
-                </div>
-                <div class="vessel-data__block-area cell-center-left-8">
-                    <input class="density-init-input" type="number" value="0.00">
-                </div>
-                <div class="vessel-data__block-area cell-center-left-9"></div>
-                <div class="vessel-data__block-area cell-center-left-10"></div>
-                <div class="vessel-data__block-area cell-center-left-11"></div>
-                <div class="vessel-data__block-area cell-center-left-12"></div>
-                <div class="vessel-data__block-area cell-center-left-13"></div>
-                <div class="vessel-data__block-area cell-center-left-14"></div>
-                <div class="vessel-data__block-area cell-center-left-15"></div>
-                <div class="vessel-data__block-area cell-center-left-16"></div>
-                <div class="vessel-data__block-area cell-center-left-17"></div>
-                <div class="vessel-data__block-area cell-center-left-18"></div>
-                <div class="vessel-data__block-area cell-center-left-19"></div>
-                <div class="vessel-data__block-area cell-center-left-20"></div>
-                <div class="vessel-data__block-area cell-center-left-21"></div>
-                <div class="vessel-data__block-area cell-center-left-22"></div>
-                <div class="vessel-data__block-area cell-center-left-23"></div>
-                <div class="vessel-data__block-area cell-center-left-24"></div>
-                <div class="vessel-data__block-area cell-center-left-25"></div>
-                <div class="vessel-data__block-area cell-center-left-26"></div>
-                <div class="vessel-data__block-area cell-center-left-27"></div>
-                <div class="vessel-data__block-area cell-center-left-28"></div>
-                <div class="vessel-data__block-area cell-center-left-29"></div>
-                <div class="vessel-data__block-area cell-center-left-30"></div>
-                <div class="vessel-data__block-area cell-center-left-31"></div>
-                <div class="vessel-data__block-area cell-center-left-32"></div>
-                <div class="vessel-data__block-area cell-center-left-33"></div>
-                <div class="vessel-data__block-area cell-center-left-34"></div>
-                <div class="vessel-data__block-area cell-center-left-35"></div>
-                <div class="vessel-data__block-area cell-center-left-36"></div>
-                <div class="vessel-data__block-area cell-center-left-37"></div>
-                <div class="vessel-data__block-area cell-center-left-38"></div>
-                <div class="vessel-data__block-area cell-center-left-39"></div>
-                <div class="vessel-data__block-area cell-center-left-40"></div>
-                <div class="vessel-data__block-area cell-center-left-41"></div>
-                <div class="vessel-data__block-area cell-center-left-42"></div>
-                <div class="vessel-data__block-area cell-center-left-43"></div>
-                <div class="vessel-data__block-area cell-center-left-44"></div>
-                <div class="vessel-data__block-area cell-center-left-45"></div>
-                <div class="vessel-data__block-area cell-center-left-46"></div>
-                <div class="vessel-data__block-area cell-center-left-47"></div>
+            <div class="block-area-three">
+              <input
+                class="cell-input port-aft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
             </div>
-            <div class="vessel-data__block">
-                <div class="vessel-data__block-area cell-center-right-1">
-                    <h3>Final</h3>
-                </div>
-                <div class="vessel-data__block-area cell-center-right-2">
-                    <input class="final-date" type="date" placeholder="dd.mm.yyyy">
-                </div>
-                <div class="vessel-data__block-area cell-center-right-3">
-                    <div class="block-area-one"><p>FWD</p></div>
-                    <div class="block-area-two"><p>MID</p></div>
-                    <div class="block-area-three"><p>AFT</p></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-right-4">
-                    <div class="block-area-one"><input class="cell-input port-fwd-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-two"><input class="cell-input mid-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-three"><input class="cell-input aft-draft-init-input" type="number" value="0"></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-right-5">
-                    <div class="block-area-one"><input class="cell-input port-fwd-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-two"><input class="cell-input mid-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-three"><input class="cell-input aft-draft-init-input" type="number" value="0"></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-right-6">
-                    <div class="block-area-one"><input class="cell-input port-fwd-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-two"><input class="cell-input mid-draft-init-input" type="number" value="0"></div>
-                    <div class="block-area-three"><input class="cell-input aft-draft-init-input" type="number" value="0"></div>
-                </div>
-                <div class="vessel-data__block-area cell-center-right-7"></div>
-                <div class="vessel-data__block-area cell-center-right-8"></div>
-                <div class="vessel-data__block-area cell-center-right-9"></div>
-                <div class="vessel-data__block-area cell-center-right-10"></div>
-                <div class="vessel-data__block-area cell-center-right-11"></div>
-                <div class="vessel-data__block-area cell-center-right-12"></div>
-                <div class="vessel-data__block-area cell-center-right-13"></div>
-                <div class="vessel-data__block-area cell-center-right-14"></div>
-                <div class="vessel-data__block-area cell-center-right-15"></div>
-                <div class="vessel-data__block-area cell-center-right-16"></div>
-                <div class="vessel-data__block-area cell-center-right-17"></div>
-                <div class="vessel-data__block-area cell-center-right-18"></div>
-                <div class="vessel-data__block-area cell-center-right-19"></div>
-                <div class="vessel-data__block-area cell-center-right-20"></div>
-                <div class="vessel-data__block-area cell-center-right-21"></div>
-                <div class="vessel-data__block-area cell-center-right-22"></div>
-                <div class="vessel-data__block-area cell-center-right-23"></div>
-                <div class="vessel-data__block-area cell-center-right-24"></div>
-                <div class="vessel-data__block-area cell-center-right-25"></div>
-                <div class="vessel-data__block-area cell-center-right-26"></div>
-                <div class="vessel-data__block-area cell-center-right-27"></div>
-                <div class="vessel-data__block-area cell-center-right-28"></div>
-                <div class="vessel-data__block-area cell-center-right-29"></div>
-                <div class="vessel-data__block-area cell-center-right-30"></div>
-                <div class="vessel-data__block-area cell-center-right-31"></div>
-                <div class="vessel-data__block-area cell-center-right-32"></div>
-                <div class="vessel-data__block-area cell-center-right-33"></div>
-                <div class="vessel-data__block-area cell-center-right-34"></div>
-                <div class="vessel-data__block-area cell-center-right-35"></div>
-                <div class="vessel-data__block-area cell-center-right-36"></div>
-                <div class="vessel-data__block-area cell-center-right-37"></div>
-                <div class="vessel-data__block-area cell-center-right-38"></div>
-                <div class="vessel-data__block-area cell-center-right-39"></div>
-                <div class="vessel-data__block-area cell-center-right-40"></div>
-                <div class="vessel-data__block-area cell-center-right-41"></div>
-                <div class="vessel-data__block-area cell-center-right-42"></div>
-                <div class="vessel-data__block-area cell-center-right-43"></div>
-                <div class="vessel-data__block-area cell-center-right-44"></div>
-                <div class="vessel-data__block-area cell-center-right-45"></div>
-                <div class="vessel-data__block-area cell-center-right-47"></div>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-6">
+            <div class="block-area-one">
+              <p class="cell-input port-fwd-draft-init-result"></p>
+              0,00
             </div>
-            <div class="vessel-data__block">
-                <div class="vessel-data__block-area cell-right-1"></div>
-                <div class="vessel-data__block-area cell-right-2"></div>
-                <div class="vessel-data__block-area cell-right-3"></div>
-                <div class="vessel-data__block-area cell-right-4"></div>
-                <div class="vessel-data__block-area cell-right-5"></div>
-                <div class="vessel-data__block-area cell-right-6"></div>
-                <div class="vessel-data__block-area cell-right-7"></div>
-                <div class="vessel-data__block-area cell-right-8"></div>
-                <div class="vessel-data__block-area cell-right-9"></div>
-                <div class="vessel-data__block-area cell-right-10"></div>
-                <div class="vessel-data__block-area cell-right-11"></div>
-                <div class="vessel-data__block-area cell-right-12"></div>
-                <div class="vessel-data__block-area cell-right-13"></div>
-                <div class="vessel-data__block-area cell-right-14"></div>
-                <div class="vessel-data__block-area cell-right-15"></div>
-                <div class="vessel-data__block-area cell-right-16"></div>
-                <div class="vessel-data__block-area cell-right-17"></div>
-                <div class="vessel-data__block-area cell-right-18"></div>
-                <div class="vessel-data__block-area cell-right-19"></div>
-                <div class="vessel-data__block-area cell-right-20"></div>
-                <div class="vessel-data__block-area cell-right-21"></div>
-                <div class="vessel-data__block-area cell-right-22"></div>
-                <div class="vessel-data__block-area cell-right-23"></div>
-                <div class="vessel-data__block-area cell-right-24"></div>
-                <div class="vessel-data__block-area cell-right-25"></div>
-                <div class="vessel-data__block-area cell-right-26"></div>
-                <div class="vessel-data__block-area cell-right-27"></div>
-                <div class="vessel-data__block-area cell-right-28"></div>
-                <div class="vessel-data__block-area cell-right-29"></div>
-                <div class="vessel-data__block-area cell-right-30"></div>
-                <div class="vessel-data__block-area cell-right-31"></div>
-                <div class="vessel-data__block-area cell-right-32"></div>
-                <div class="vessel-data__block-area cell-right-33"></div>
-                <div class="vessel-data__block-area cell-right-34"></div>
-                <div class="vessel-data__block-area cell-right-35"></div>
-                <div class="vessel-data__block-area cell-right-36"></div>
-                <div class="vessel-data__block-area cell-right-37"></div>
-                <div class="vessel-data__block-area cell-right-38"></div>
-                <div class="vessel-data__block-area cell-right-39"></div>
-                <div class="vessel-data__block-area cell-right-40"></div>
-                <div class="vessel-data__block-area cell-right-41"></div>
-                <div class="vessel-data__block-area cell-right-42"></div>
-                <div class="vessel-data__block-area cell-right-43"></div>
-                <div class="vessel-data__block-area cell-right-44"></div>
-                <div class="vessel-data__block-area cell-right-45"></div>
-                <div class="vessel-data__block-area cell-right-46"></div>
-                <div class="vessel-data__block-area cell-right-47"></div>
+            <div class="block-area-two">
+              <p class="cell-input mid-draft-init-result">0,00</p>
             </div>
-        </section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
-        <section></section>
+            <div class="block-area-three">
+              <p class="cell-input aft-draft-init-result">0,00</p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-7">
+            <input
+              class="density-init-input full-size-input"
+              type="number"
+              step="0.0005"
+              value="1.025"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-8">
+            <p class="trim-bm-init-input text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-9">
+            <p class="cell-input lbp-init-result text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-10"></div>
+          <div class="vessel-data__block-area cell-center-left-11"></div>
+          <div class="vessel-data__block-area cell-center-left-12">
+            <input
+              class="distance-from-mark-fwd-input full-size-input"
+              type="number"
+              value="0.00"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-13">
+            <input
+              class="distance-from-mark-mid-input full-size-input"
+              type="number"
+              value="0.00"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-14">
+            <input
+              class="distance-from-mark-aft-input full-size-input"
+              type="number"
+              value="0.00"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-15"></div>
+          <div class="vessel-data__block-area cell-center-left-16">
+            <p class="corr-to-fwd-draft-mark-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-17">
+            <p class="corr-to-mid-draft-mark-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-18">
+            <p class="corr-to-aft-draft-mark-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-19"></div>
+          <div class="vessel-data__block-area cell-center-left-20">
+            <p class="draft-at-perp-fwd-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-21">
+            <p class="draft-at-perp-mid-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-22">
+            <p class="draft-at-perp-aft-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-23">
+            <p class="trim-btw-perpend-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-24">
+            <p class="mean-of-means-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-25">
+            <p class="displa-table-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-26">
+            <input
+              class="lbp-init-input full-size-input"
+              type="number"
+              step="0.01"
+              value="0.00"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-27"></div>
+          <div class="vessel-data__block-area cell-center-left-28"></div>
+          <div class="vessel-data__block-area cell-center-left-29">
+            <p class="lcf-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-30">
+            <p class="tpc-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-31">
+            <p class="first-trim-corr-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-32">
+            <p class="mom+50-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-33">
+            <p class="mom-50-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-34"></div>
+          <div class="vessel-data__block-area cell-center-left-35">
+            <p class="at-mom+0.5-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-36">
+            <p class="at-mom-0.5-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-37">
+            <p class="diff-mtc-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-38">
+            <p class="second-trim-corr-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-39">
+            <p class="dist-btw-midship-drafts-init-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-40"></div>
+          <div class="vessel-data__block-area cell-center-left-41">
+            <div class="block-area-one">
+              <p class="text-area tpc-draft-midship-port-init-text">0,00</p>
+            </div>
+            <div class="block-area-two">
+              <p class="text-area tpc-midship-port-init-text">0,00</p>
+            </div>
+            <div class="block-area-three">
+              <p class="text-area"></p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-42">
+            <div class="block-area-one">
+              <p class="text-area tpc-draft-midship-stbd-init-text">0,00</p>
+            </div>
+            <div class="block-area-two">
+              <p class="text-area tpc-midship-stbd-init-text">0,00</p>
+            </div>
+            <div class="block-area-three">
+              <p class="text-area"></p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-43">
+            <p class="text-area tpc-difference-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-44">
+            <p class="text-area hell-correction-initial-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-45">
+            <p class="text-area displ-corr-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-left-46">
+            <input
+              class="density-table-input full-size-input"
+              type="number"
+              step="0.0005"
+              value="0.00"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-left-47">
+            <p class="text-area corrected-displ-init-text">0,00</p>
+          </div>
+        </div>
+        <div class="vessel-data__block">
+          <div class="vessel-data__block-area cell-center-right-1">
+            <h3>Final</h3>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-2">
+            <input class="final-date" type="date" placeholder="dd.mm.yyyy" />
+          </div>
+          <div class="vessel-data__block-area cell-center-right-3">
+            <div class="block-area-one"><p>FWD</p></div>
+            <div class="block-area-two"><p>MID</p></div>
+            <div class="block-area-three"><p>AFT</p></div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-4">
+            <div class="block-area-one">
+              <input
+                class="cell-input port-fwd-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-two">
+              <input
+                class="cell-input mid-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-three">
+              <input
+                class="cell-input aft-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-5">
+            <div class="block-area-one">
+              <input
+                class="cell-input port-fwd-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-two">
+              <input
+                class="cell-input mid-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-three">
+              <input
+                class="cell-input aft-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-6">
+            <div class="block-area-one">
+              <input
+                class="cell-input port-fwd-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-two">
+              <input
+                class="cell-input mid-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+            <div class="block-area-three">
+              <input
+                class="cell-input aft-draft-init-input"
+                type="number"
+                value="0.00"
+                step="0.01"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-7">
+            <input
+              class="density-final-input full-size-input"
+              type="number"
+              step="0.0005"
+              value="1.025"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-center-right-8">
+            <p class="trim-bm-final-input text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-9">
+            <p class="cell-input lbp-final-result text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-10"></div>
+          <div class="vessel-data__block-area cell-center-right-11"></div>
+          <div class="vessel-data__block-area cell-center-right-12">
+            <p class="distance-from-mark-fwd-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-13">
+            <p class="distance-from-mark-fwd-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-14">
+            <p class="distance-from-mark-fwd-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-15"></div>
+          <div class="vessel-data__block-area cell-center-right-16">
+            <p class="corr-to-fwd-draft-mark-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-17">
+            <p class="corr-to-mid-draft-mark-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-18">
+            <p class="corr-to-aft-draft-mark-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-19"></div>
+          <div class="vessel-data__block-area cell-center-right-20">
+            <p class="draft-at-perp-fwd-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-21">
+            <p class="draft-at-perp-mid-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-22">
+            <p class="draft-at-perp-aft-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-23">
+            <p class="trim-btw-perpend-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-24">
+            <p class="mean-of-means-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-25">
+            <p class="displa-table-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-26">
+            <p class="lbp-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-27"></div>
+          <div class="vessel-data__block-area cell-center-right-28"></div>
+          <div class="vessel-data__block-area cell-center-right-29">
+            <p class="lcf-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-30">
+            <p class="tpc-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-31">
+            <p class="first-trim-corr-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-32">
+            <p class="mom+50-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-33">
+            <p class="mom-50-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-34"></div>
+          <div class="vessel-data__block-area cell-center-right-35">
+            <p class="at-mom+0.5-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-36">
+            <p class="at-mom-0.5-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-37">
+            <p class="diff-mtc-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-38">
+            <p class="second-trim-corr-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-39">
+            <p class="dist-btw-midship-drafts-final-text text-area">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-40"></div>
+          <div class="vessel-data__block-area cell-center-right-41">
+            <div class="block-area-one">
+              <p class="text-area tpc-draft-midship-port-final-text">0,00</p>
+            </div>
+            <div class="block-area-two">
+              <p class="text-area tpc-midship-port-final-text">0,00</p>
+            </div>
+            <div class="block-area-three">
+              <p class="text-area"></p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-42">
+            <div class="block-area-one">
+              <p class="text-area tpc-draft-midship-stbd-final-text">0,00</p>
+            </div>
+            <div class="block-area-two">
+              <p class="text-area tpc-midship-stbd-final-text">0,00</p>
+            </div>
+            <div class="block-area-three">
+              <p class="text-area"></p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-43">
+            <p class="text-area tpc-difference-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-44">
+            <p class="text-area hell-correction-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-45">
+            <p class="text-area displ-corr-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-46">
+            <p class="text-area density-table-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-center-right-47">
+            <p class="text-area corrected-displ-final-text">0,00</p>
+          </div>
+        </div>
+        <div class="vessel-data__block">
+          <div class="vessel-data__block-area cell-right-1"></div>
+          <div class="vessel-data__block-area cell-right-2">
+            <p>KNOW WEIGHT</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-3"></div>
+          <div class="vessel-data__block-area cell-right-4">
+            <p>INITIAL DEDUCTABLES</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-5">
+            <div class="deduct-one">F.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-FO-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-6">
+            <div class="deduct-one">D.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-DO-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-7">
+            <div class="deduct-one">L.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-LO-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-8">
+            <div class="deduct-one">F.W.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-FW-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-9">
+            <div class="deduct-one">BALLAST</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-ballast-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-10">
+            <div class="deduct-one">CONSTANT</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-Constant-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-11">
+            <div class="deduct-one">OTHER</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-other-init-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-12">
+            <div class="deduct-one">TOTAL</div>
+            <div class="deduct-two">
+              <p class="text-area total-deduct-init-text">0,00</p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-13"></div>
+          <div class="vessel-data__block-area cell-right-14">
+            <p class="text-area">Corrected Initial Displacement:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-15">
+            <p class="text-area corrected-displ-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-16">
+            <p class="text-area">Initial Deductables:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-17">
+            <p class="text-area corrected-deduct-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-18">
+            <p class="text-area">Initial Net Displacement:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-19">
+            <p class="text-area net-displ-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-20">
+            <p class="text-area">Light Ship:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-21">
+            <input
+              class="lightship-input full-size-input"
+              type="number"
+              value="0.00"
+              step="0.01"
+            />
+          </div>
+          <div class="vessel-data__block-area cell-right-22">
+            <p class="text-area">Final Weight:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-23">
+            <p class="text-area final-weight-init-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-24"></div>
+          <div class="vessel-data__block-area cell-right-25">
+            <p>FINAL DEDUCTABLES</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-26">
+            <div class="deduct-one">F.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-FO-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-27">
+            <div class="deduct-one">D.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-DO-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-28">
+            <div class="deduct-one">L.O.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-LO-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-29">
+            <div class="deduct-one">F.W.</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-FW-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-30">
+            <div class="deduct-one">BALLAST</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-ballast-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-31">
+            <div class="deduct-one">CONSTANT</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-Constant-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-32">
+            <div class="deduct-one">OTHER</div>
+            <div class="deduct-two">
+              <input
+                class="deduct-other-final-input full-size-input"
+                type="number"
+                value="0.00"
+                step="0.05"
+              />
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-33">
+            <div class="deduct-one">TOTAL</div>
+            <div class="deduct-two">
+              <p class="text-area total-deduct-final-text">0,00</p>
+            </div>
+          </div>
+          <div class="vessel-data__block-area cell-right-34"></div>
+          <div class="vessel-data__block-area cell-right-35">
+            <p class="text-area">Corrected Final Displacement:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-36">
+            <p class="text-area corrected-displ-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-37">
+            <p class="text-area">Final Deductables:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-38">
+            <p class="text-area corrected-deduct-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-39">
+            <p class="text-area">Final Net Displacement:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-40">
+            <p class="text-area net-displ-final-text">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-41">
+            <p class="text-area">Light Ship:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-42">
+            <p class="text-area vessel-lightship">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-43">
+            <p class="text-area">Cargo MT:</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-44">
+            <p class="text-area vessel-lightship">0,00</p>
+          </div>
+          <div class="vessel-data__block-area cell-right-45"></div>
+          <div class="vessel-data__block-area cell-right-46"></div>
+          <div class="vessel-data__block-area cell-right-47"></div>
+        </div>
+      </section>
     </main>
-    <footer></footer>
-</body>
+
+
+    <script src="./js/calculation.js"></script>
+  </body>
 </html>

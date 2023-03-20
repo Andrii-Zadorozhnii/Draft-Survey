@@ -7,7 +7,6 @@
 
 body{
     font-family: Arial, Helvetica, sans-serif;
-    padding: 10px;
 
 }
 
@@ -18,7 +17,9 @@ main {
 input{
     border: var.$borderSizeStandart;
     border-radius: var.$borderRadiusStandard;
-    padding-left: 10px;
     outline: none;
     text-align: center;
+    color: brown;
+    background-color: lightgoldenrodyellow;
+    height: 12px;
 }

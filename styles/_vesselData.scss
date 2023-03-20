@@ -6,14 +6,15 @@
     width: 100%;
     height: fit-content;
     display: flex;
+    margin-bottom: 50px;
 
     &__block {
         // border: 1px solid gray;
-        width: 100%;
+        width: 33.33%;
 
         &-area {
             width: 100%;
-            height: 23px;
+            height: 17px;
             border: 1px solid gray;
             padding-left: 10px;
             padding-right: 10px;
@@ -26,6 +27,7 @@
 h3 {
     text-align: center;
 }
+
 
 //*****************************************
 .cell-left {
@@ -131,76 +133,21 @@ h3 {
         border-right: 0px;
         background-color: var.$cellBackgroundColor;
     }
-}
 
-
-
-//*****************************************
-.cell-center-right {
-
-    &-1 {
-        border-top: 2px solid gray;
-        background-color: var.$cellBackgroundColor;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    &-3 {
-        padding: 0px;
-        display: flex;
-        justify-content: center;
-    }
-
-    &-4 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-    }
-
-    &-5 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-    }
-
-    &-6 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
-    }
-
-    &-10 {
-        border-left: 0px;
-        border-right: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-15 {
-        border-left: 0px;
-        border-right: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-19 {
-        border-left: 0px;
-        border-right: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-27 {
-        border-left: 0px;
-        border-right: 0px;
-        background-color: var.$cellBackgroundColor;
+    &-47 {
+        border-bottom: 2px solid gray;
     }
 }
+
+
+
 
 //*****************************************
 .cell-center-left {
 
     &-1 {
         border-top: 2px solid gray;
-        background-color: var.$cellBackgroundColor;
+        background-color: lightgreen;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -233,6 +180,13 @@ h3 {
     &-10 {
         border-left: 0px;
         border-right: 0px;
+        border-bottom: 0px;
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-11 {
+        border-top: 0px;
+        border-right: 0px;
         background-color: var.$cellBackgroundColor;
     }
 
@@ -250,10 +204,119 @@ h3 {
 
     &-27 {
         border-left: 0px;
+        border-bottom: 0px;
         border-right: 0px;
         background-color: var.$cellBackgroundColor;
     }
+
+    &-28 {
+        border-top: 0px;
+        border-right: 0px;
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-34 {
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-40 {
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-47 {
+        border-bottom: 2px solid gray;
+    }
 }
+
+//*****************************************
+.cell-center-right {
+
+    &-1 {
+        border-top: 2px solid gray;
+        background-color: lightcoral;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-3 {
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+    }
+
+    &-4 {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    &-5 {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    &-6 {
+        display: flex;
+        justify-content: center;
+        padding: 0px;
+    }
+
+    &-10 {
+        border-left: 0px;
+        border-bottom: 0px;
+
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-11 {
+        border-top: 0px;
+        border-left: 0px;
+
+
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-15 {
+        border-left: 0px;
+
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-19 {
+        border-left: 0px;
+
+        background-color: var.$cellBackgroundColor;
+    }
+
+
+
+    &-27 {
+        border-left: 0px;
+        border-bottom: 0px;
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-28 {
+        border-top: 0px;
+        border-left: 0px;
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-34 {
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-40 {
+        background-color: var.$cellBackgroundColor;
+    }
+
+    &-47 {
+        border-bottom: 2px solid gray;
+    }
+}
+
 
 //*****************************************
 .cell-right {
@@ -270,44 +333,29 @@ h3 {
     }
 
     &-4 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
+
+        background: lightgreen;
+
+
+        & p {
+            margin: 0 auto;
+        }
     }
 
-    &-5 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
+    &-25 {
+
+        background: lightcoral;
+
+        & p {
+            margin: 0 auto;
+        }
     }
 
-    &-6 {
-        display: flex;
-        justify-content: center;
-        padding: 0px;
+    &-47 {
+        border-bottom: 2px solid gray;
     }
 
-    &-10 {
-        border-left: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-15 {
-        border-left: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-19 {
-        border-left: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
-
-    &-27 {
-        border-left: 0px;
-        background-color: var.$cellBackgroundColor;
-    }
 }
-
 
 // ______________________________________________________________
 
@@ -350,7 +398,20 @@ h3 {
     padding-left: 0px;
 }
 
-.density-init-input{
+.full-size-input,
+.text-area {
     width: 100%;
     border: 0px;
+    text-align: center;
+
+}
+
+
+
+
+// Deductable area
+
+.deduct-one,
+.deduct-two {
+    width: 50%;
 }

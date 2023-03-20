@@ -12,8 +12,10 @@
     min-width: 200px;
 }
 .item {
-    min-width: 100px;
+    min-width: 200px;
     margin-bottom: 5px;
+    height: 25px;
     display: flex;
     align-items: center;
+    font-size: 20px;
 }
