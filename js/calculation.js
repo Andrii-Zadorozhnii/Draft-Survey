@@ -1,81 +1,98 @@
+
+function meanCalculation(a, b){
+  return ((a+b)/2);
+}
+
+
 //*********** Port Forward Draft ***********
 const portFwdDraftInput = document.querySelector('.port-fwd-draft-init-input');
+let portFwdDraftInitial = localStorage.getItem('portFwdDraftInitialLS') || portFwdDraftInput.value;
+let fwdMeanDraftInit = localStorage.getItem('fwdMeanDraftInitLS'); // retrieve fwdMeanDraftInit value from local storage
 
-let portFwdDraftInitial = localStorage.getItem('portFwdDraftInitialLS') || portFwdDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
-
-// set the initial value of the input field to the retrieved value
 portFwdDraftInput.value = portFwdDraftInitial;
 
+if (fwdMeanDraftInit) {
+  document.querySelector('.fwd-draft-init-result').innerHTML = fwdMeanDraftInit;
+}
+
 portFwdDraftInput.addEventListener('input', () => {
-  portFwdDraftInitial = portFwdDraftInput.value; // update value when input changes
-  localStorage.setItem('portFwdDraftInitialLS', portFwdDraftInitial); // store the updated value in local storage
-  console.log(`Port Fwd Initial Draft is: ${portFwdDraftInitial}`); // log the updated value
+  portFwdDraftInitial = portFwdDraftInput.value;
+  localStorage.setItem('portFwdDraftInitialLS', portFwdDraftInitial);
+  fwdMeanDraftInit = meanCalculation(+portFwdDraftInitial, +stbdFwdDraftInitial);
+  localStorage.setItem('fwdMeanDraftInitLS', fwdMeanDraftInit); // store fwdMeanDraftInit value in local storage
+  console.log(`Port Fwd Initial Draft is: ${portFwdDraftInitial}`);
+  console.log(`Mean Fwd Draft Initial: ${fwdMeanDraftInit}`);
+  document.querySelector('.fwd-draft-init-result').innerHTML = fwdMeanDraftInit;
 });
 
 
 //*********** Port Mid Draft ***********
 const portMidDraftInput = document.querySelector('.port-mid-draft-init-input');
-
-let portMidDraftInitial = localStorage.getItem('portMidDraftInitialLS') || portMidDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
+let portMidDraftInitial = localStorage.getItem('portMidDraftInitialLS') || portMidDraftInput.value;
+let midMeanDraftInit = localStorage.getItem('midMeanDraftInitLS'); // retrieve fwdMeanDraftInit value from local storage
 
 portMidDraftInput.value = portMidDraftInitial;
 
+if (midMeanDraftInit) {
+  document.querySelector('.mid-draft-init-result').innerHTML = midMeanDraftInit;
+}
+
 portMidDraftInput.addEventListener('input', () => {
-  portMidDraftInitial = portMidDraftInput.value; // update value when input changes
-  localStorage.setItem('portMidDraftInitialLS', portMidDraftInitial); // store the updated value in local storage
-  console.log(`Port Mid Initial Draft is: ${portMidDraftInitial}`); // log the updated value
+  portMidDraftInitial = portMidDraftInput.value;
+  localStorage.setItem('portMidDraftInitialLS', portMidDraftInitial);
+  midMeanDraftInit = meanCalculation(+portMidDraftInitial, +stbdMidDraftInitial);
+  localStorage.setItem('midMeanDraftInitLS', midMeanDraftInit); // store fwdMeanDraftInit value in local storage
+  console.log(`Port Mid Initial Draft is: ${portMidDraftInitial}`);
+  console.log(`Mean Mid Draft Initial: ${midMeanDraftInit}`);
+  document.querySelector('.mid-draft-init-result').innerHTML = midMeanDraftInit;
 });
 
 //*********** Port Aft Draft ***********
-const portAftDraftInput = document.querySelector('.port-aft-draft-init-input');
-
-let portAftDraftInitial = localStorage.getItem('portAftDraftInitialLS') || portAftDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
-
-portAftDraftInput.value = portAftDraftInitial;
-
-portAftDraftInput.addEventListener('input', () => {
-  portAftDraftInitial = portAftDraftInput.value; // update value when input changes
-  localStorage.setItem('portAftDraftInitialLS', portAftDraftInitial); // store the updated value in local storage
-  console.log(`Port Aft Initial Draft is: ${portAftDraftInitial}`); // log the updated value
-});
 
 
 //*********** Stbd Fwd Draft ***********
 const stbdFwdDraftInput = document.querySelector('.stbd-fwd-draft-init-input');
-
-let stbdFwdDraftInitial = localStorage.getItem('stbdFwdDraftInitialLS') || portMidDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
+let stbdFwdDraftInitial = localStorage.getItem('stbdFwdDraftInitialLS') || stbdFwdDraftInput.value;
+fwdMeanDraftInit = localStorage.getItem('fwdMeanDraftInitLS'); // retrieve fwdMeanDraftInit value from local storage
 
 stbdFwdDraftInput.value = stbdFwdDraftInitial;
 
+if (fwdMeanDraftInit) {
+  document.querySelector('.fwd-draft-init-result').innerHTML = fwdMeanDraftInit;
+}
+
 stbdFwdDraftInput.addEventListener('input', () => {
-  stbdFwdDraftInitial = stbdFwdDraftInput.value; // update value when input changes
-  localStorage.setItem('stbdFwdDraftInitialLS', stbdFwdDraftInitial); // store the updated value in local storage
-  console.log(`Stbd Fwd Initial Draft is: ${stbdFwdDraftInitial}`); // log the updated value
+  stbdFwdDraftInitial = stbdFwdDraftInput.value;
+  localStorage.setItem('stbdFwdDraftInitialLS', stbdFwdDraftInitial);
+  fwdMeanDraftInit = meanCalculation(+portFwdDraftInitial, +stbdFwdDraftInitial);
+  localStorage.setItem('fwdMeanDraftInitLS', fwdMeanDraftInit); // store fwdMeanDraftInit value in local storage
+  console.log(`Port Fwd Initial Draft is: ${stbdFwdDraftInitial}`);
+  console.log(`Mean Fwd Draft Initial: ${fwdMeanDraftInit}`);
+  document.querySelector('.fwd-draft-init-result').innerHTML = fwdMeanDraftInit;
 });
 
-//*********** Stb Mid Draft ***********
-const stbdMidDraftInput = document.querySelector('.stbd-mid-draft-init-input');
 
-let stbdMidDraftInitial = localStorage.getItem('stbdMidDraftInitialLS') || portMidDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
+//*********** Stb Mid Draft ***********
+
+const stbdMidDraftInput = document.querySelector('.stbd-mid-draft-init-input');
+let stbdMidDraftInitial = localStorage.getItem('stbdMidDraftInitialLS') || stbdMidDraftInput.value;
+midMeanDraftInit = localStorage.getItem('midMeanDraftInitLS'); // retrieve fwdMeanDraftInit value from local storage
 
 stbdMidDraftInput.value = stbdMidDraftInitial;
 
+if (midMeanDraftInit) {
+  document.querySelector('.mid-draft-init-result').innerHTML = midMeanDraftInit;
+}
+
 stbdMidDraftInput.addEventListener('input', () => {
-  stbdMidDraftInitial = stbdMidDraftInput.value; // update value when input changes
-  localStorage.setItem('stbdMidDraftInitialLS', stbdMidDraftInitial); // store the updated value in local storage
-  console.log(`Stbd Mid Initial Draft is: ${stbdMidDraftInitial}`); // log the updated value
+  stbdMidDraftInitial = stbdMidDraftInput.value;
+  localStorage.setItem('stbdMidDraftInitialLS', stbdMidDraftInitial);
+  midMeanDraftInit = meanCalculation(+portMidDraftInitial, +stbdMidDraftInitial);
+  localStorage.setItem('midMeanDraftInitLS', midMeanDraftInit); // store fwdMeanDraftInit value in local storage
+  console.log(`stbd Mid Initial Draft is: $stbdtMidDraftInitial}`);
+  console.log(`Mean Mid Draft Initial: ${midMeanDraftInit}`);
+  document.querySelector('.mid-draft-init-result').innerHTML = midMeanDraftInit;
 });
 
 //*********** Stb Aft Draft ***********
-const stbdAftDraftInput = document.querySelector('.stbd-Aft-draft-init-input');
-
-let stbdAftDraftInitial = localStorage.getItem('stbdAftDraftInitialLS') || portMidDraftInput.value; // retrieve initial value from local storage, or use the input value if local storage is empty
-
-stbdAftDraftInput.value = stbdAftDraftInitial;
-
-stbdAftDraftInput.addEventListener('input', () => {
-  stbdAftDraftInitial = stbdAftDraftInput.value; // update value when input changes
-  localStorage.setItem('stbdAftDraftInitialLS', stbdAftDraftInitial); // store the updated value in local storage
-  console.log(`Stbd Aft Initial Draft is: ${stbdAftDraftInitial}`); // log the updated value
-});
 
